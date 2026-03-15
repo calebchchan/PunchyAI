@@ -1,5 +1,8 @@
 import type { Metadata } from "next";
 import { DM_Serif_Display, DM_Sans, IBM_Plex_Mono } from "next/font/google";
+import { SidebarProvider, SidebarInset } from "@/components/ui/sidebar";
+import { AppSidebar } from "@/components/Sidebar";
+import { Header } from "@/components/Header";
 import "./globals.css";
 
 const dmSerifDisplay = DM_Serif_Display({
@@ -36,7 +39,15 @@ export default function RootLayout({
       lang="en"
       className={`${dmSerifDisplay.variable} ${dmSans.variable} ${ibmPlexMono.variable}`}
     >
-      <body className="font-body antialiased">{children}</body>
+      <body className="font-body antialiased">
+        <SidebarProvider>
+          <AppSidebar />
+          <SidebarInset>
+            <Header />
+            <main className="flex-1 p-6">{children}</main>
+          </SidebarInset>
+        </SidebarProvider>
+      </body>
     </html>
   );
 }
