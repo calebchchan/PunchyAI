@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm view @anthropic-ai/sdk version)",
+      "Bash(npm view recharts version)",
+      "WebFetch(domain:ui.shadcn.com)",
+      "WebFetch(domain:docs.anthropic.com)",
+      "Bash(npx create-next-app@14 . --typescript --tailwind --eslint --app --no-src-dir --import-alias=\"@/*\" --use-npm)",
+      "Bash(npx create-next-app@14 . --typescript --tailwind --eslint --app --no-src-dir --import-alias=\"@/*\" --use-npm 2)",
+      "Bash(for f in .eslintrc.json .gitignore package.json package-lock.json postcss.config.mjs tailwind.config.ts tsconfig.json)",
+      "Bash(do cp \"$f\" /c/Users/user/Desktop/PunchyAI/)",
+      "Bash(done)"
+    ]
+  }
+}
