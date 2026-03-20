@@ -1,23 +1,67 @@
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
+    /* Goldman Sachs-inspired dark navy palette — applied as default (dark-only app) */
+    --background: #0B1120;
+    --foreground: #F1F5F9;
+    --card: #111827;
+    --card-foreground: #F1F5F9;
+    --popover: #111827;
+    --popover-foreground: #F1F5F9;
+    --primary: #6B9BF2;
+    --primary-foreground: #0B1120;
+    --secondary: #C9A962;
+    --secondary-foreground: #0B1120;
+    --muted: #1A2332;
+    --muted-foreground: #64748B;
+    --accent: #1A2332;
+    --accent-foreground: #F1F5F9;
+    --destructive: #F87171;
+    --border: #1E2D3D;
+    --input: #1E2D3D;
+    --ring: #6B9BF2;
+    --radius: 0.625rem;
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+    /* Chart colors */
+    --chart-1: #6B9BF2;
+    --chart-2: #4ADE80;
+    --chart-3: #C9A962;
+    --chart-4: #F87171;
+    --chart-5: #3B82F6;
+
+    /* Sidebar */
+    --sidebar: #0D1526;
+    --sidebar-foreground: #F1F5F9;
+    --sidebar-primary: #6B9BF2;
+    --sidebar-primary-foreground: #0B1120;
+    --sidebar-accent: #1A2332;
+    --sidebar-accent-foreground: #F1F5F9;
+    --sidebar-border: #1E2D3D;
+    --sidebar-ring: #6B9BF2;
+
+    /* Custom tokens */
+    --surface: #111827;
+    --surface-elevated: #1A2332;
+    --success: #4ADE80;
+    --accent-blue: #3B82F6;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+
+  html {
+    @apply font-body;
+  }
 }
 
 @layer utilities {
